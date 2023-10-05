@@ -11,9 +11,9 @@ dependencies:
   '@plasmohq/storage':
     specifier: ^1.8.0
     version: 1.8.0(react@18.2.0)
-  axios:
-    specifier: ^1.5.1
-    version: 1.5.1
+  '@vespaiach/axios-fetch-adapter':
+    specifier: ^0.3.1
+    version: 0.3.1(axios@1.5.1)
   cheerio:
     specifier: 1.0.0-rc.12
     version: 1.0.0-rc.12
@@ -2494,6 +2494,14 @@ packages:
   /@types/scheduler@0.16.4:
     resolution: {integrity: sha512-2L9ifAGl7wmXwP4v3pN4p2FLhD0O1qsJpvKmNin5VA8+UvNVb447UDaAEV6UdrkA+m/Xs58U1RFps44x6TFsVQ==}
     dev: true
+
+  /@vespaiach/axios-fetch-adapter@0.3.1(axios@1.5.1):
+    resolution: {integrity: sha512-+1F52VWXmQHSRFSv4/H0wtnxfvjRMPK5531e880MIjypPdUSX6QZuoDgEVeCE1vjhzDdxCVX7rOqkub7StEUwQ==}
+    peerDependencies:
+      axios: '>=0.26.0'
+    dependencies:
+      axios: 1.5.1
+    dev: false
 
   /@vue/compiler-core@3.3.4:
     resolution: {integrity: sha512-cquyDNvZ6jTbf/+x+AgM2Arrp6G4Dzbb0R64jiG804HRMfRiFXWI6kqUVqZ6ZR0bQhIoQjB4+2bhNtVwndW15g==}

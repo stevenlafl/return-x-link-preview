@@ -5,19 +5,23 @@ export const config: PlasmoCSConfig = {
   matches: ["https://x.com/*","https://twitter.com/*"],
 }
 
-let body = document.querySelector('body');
-let theme = 'light';
-switch(body.style.backgroundColor) {
-  case 'rgb(0, 0, 0)':
-    theme = 'dark';
-    break;
-  case 'rgb(21, 32, 43)':
-    theme = 'dim';
-    break;
-  case 'rgb(255, 255, 255)':
-    theme = 'light';
-    break;
+function determineTheme() {
+  let theme = 'light';
+  let body = document.querySelector('body');
+  switch(body.style.backgroundColor) {
+    case 'rgb(0, 0, 0)':
+      theme = 'dark';
+      break;
+    case 'rgb(21, 32, 43)':
+      theme = 'dim';
+      break;
+    case 'rgb(255, 255, 255)':
+      theme = 'light';
+      break;
 
+  }
+
+  return theme;
 }
 
 // Credits for the general tweet tracking structure to wseager's work on eight-dollars extension.
@@ -42,6 +46,7 @@ function collectAndTrackElements(node) {
 async function handleModification(
   containerElement: HTMLElement,
 ) {
+
   let link = containerElement.querySelectorAll('a')[0];
   let url = link.href;
   let components = link.querySelectorAll('div + div');
@@ -75,6 +80,7 @@ async function handleModification(
   descElement.style.paddingBottom = '5px';
   descElement.textContent = metadata.description;
 
+  let theme = determineTheme();
   if (theme === 'light') {
     urlElement.style.color = 'rgb(83, 100, 113)';
     titleElement.style.color = 'rgb(15, 20, 25)';

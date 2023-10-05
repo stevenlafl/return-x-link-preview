@@ -1,7 +1,6 @@
 import type { PlasmoMessaging } from "@plasmohq/messaging";
 import { Storage } from "@plasmohq/storage";
 
-import axios from 'axios';
 import * as cheerio from 'cheerio';
 
 const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
@@ -26,17 +25,19 @@ async function getUrl(url: string, urls: string[] = []) {
     return cache;
   }
 
-  let response = await axios.get(url, {
+  let response = await fetch(url, {
     headers: {
       'Content-Type': 'text/html',
-      Accept: 'text/html'
-    }
+      Accept: 'text/html',
+    },
+    mode: 'cors'
   });
+  let responseData = await response.text();
 
-  let $ = cheerio.load(response.data);
+  let $ = cheerio.load(responseData);
 
   // meta refresh, grab url
-  let matches = response.data?.match(/<META http-equiv="refresh" content="0;URL=(.*?)">/);
+  let matches = responseData?.match(/<META http-equiv="refresh" content="0;URL=(.*?)">/);
   if (matches && matches.length > 1) {
     url = matches[1];
     return getUrl(url, urls);
