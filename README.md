@@ -4,6 +4,9 @@ This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with
 
 - Firefox: https://addons.mozilla.org/en-US/firefox/addon/return-x-link-previews/
 - Chrome: pending review (for now, see the release page at https://github.com/stevenlafl/return-x-link-preview/releases)
+  - Unzip chrome-mv3-prod.zip somewhere.
+  - Go to the chrome://extensions/ page and click the Load unpacked extension button and select the unzipped folder for the extension to install it.
+
 
 ## Building/contributing
 
