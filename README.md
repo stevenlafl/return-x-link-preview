@@ -1,6 +1,11 @@
 This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
 
-## Getting Started
+## Installation
+
+- Firefox: https://addons.mozilla.org/en-US/firefox/addon/return-x-link-previews/
+- Chrome: pending review (for now, see the release page at https://github.com/stevenlafl/return-x-link-preview/releases)
+
+## Building/contributing
 
 First, run the development server:
 
