@@ -10,6 +10,10 @@
     "test": "plasmo test"
   },
   "dependencies": {
+    "@plasmohq/messaging": "^0.5.0",
+    "@plasmohq/storage": "^1.8.0",
+    "axios": "^1.5.1",
+    "cheerio": "1.0.0-rc.12",
     "plasmo": "0.83.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
