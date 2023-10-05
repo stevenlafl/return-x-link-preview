@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
+    "package": "plasmo package",
     "test": "plasmo test"
   },
   "dependencies": {
