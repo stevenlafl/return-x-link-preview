@@ -1,9 +1,6 @@
 import type { PlasmoCSConfig } from "plasmo"
 import { sendToBackground } from "@plasmohq/messaging"
 
-import { title } from "process";
-import type { DOMElement } from "react";
-
 export const config: PlasmoCSConfig = {
   matches: ["https://x.com/*","https://twitter.com/*"],
 }
