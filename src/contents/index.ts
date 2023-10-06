@@ -63,7 +63,7 @@ async function handleModification(
 
   let metadataElement = document.createElement('div');
   metadataElement.style.fontFamily = '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif';
-  metadataElement.style.padding = '10px 20px 20px 20px';
+  metadataElement.style.padding = '15px 20px 20px 20px';
   metadataElement.style.fontSize = '15px';
 
   let urlElement = document.createElement('div');
